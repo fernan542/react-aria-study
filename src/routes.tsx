@@ -1,7 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import { App } from "./app";
 import { HomePage } from "./home";
-import { MenuButtonExView, RadioGroupExView } from "./examples";
+import {
+  AlertDialogExView,
+  AlertExView,
+  MenuButtonExView,
+  RadioGroupExView,
+} from "./examples";
 
 export const router = createBrowserRouter([
   {
@@ -11,6 +16,14 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <HomePage />,
+      },
+      {
+        path: "examples/alert",
+        element: <AlertExView />,
+      },
+      {
+        path: "examples/alert-dialog",
+        element: <AlertDialogExView />,
       },
       {
         path: "examples/menu-button",

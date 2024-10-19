@@ -252,7 +252,7 @@ export const MenuButtonExView = () => {
           onClick={onButtonClick}
           onKeyDown={onButtonKeyDown}
         >
-          Actions
+          Filters
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className={clsx({
@@ -294,7 +294,7 @@ export const MenuButtonExView = () => {
       </div>
       <p>
         <label>
-          Last Action:{" "}
+          Last Filter Type:{" "}
           <input
             className="focus:outline-2 focus:outline-gray-500 bg-slate-100"
             id="action_output"
