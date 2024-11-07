@@ -4,6 +4,7 @@ import { HomePage } from "./home";
 import {
   AlertDialogExView,
   AlertExView,
+  ButtonExView,
   MenuButtonExView,
   RadioGroupExView,
 } from "./examples";
@@ -24,6 +25,10 @@ export const router = createBrowserRouter([
       {
         path: "examples/alert-dialog",
         element: <AlertDialogExView />,
+      },
+      {
+        path: "examples/button",
+        element: <ButtonExView />,
       },
       {
         path: "examples/menu-button",
