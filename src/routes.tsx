@@ -6,6 +6,7 @@ import {
   AlertExView,
   ButtonExView,
   MenuButtonExView,
+  ModalDialogExView,
   RadioGroupExView,
 } from "./examples";
 
@@ -33,6 +34,10 @@ export const router = createBrowserRouter([
       {
         path: "examples/menu-button",
         element: <MenuButtonExView />,
+      },
+      {
+        path: "examples/modal-dialog",
+        element: <ModalDialogExView />,
       },
       {
         path: "examples/radio-group",

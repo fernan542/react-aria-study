@@ -35,7 +35,7 @@ export const ButtonExView = () => {
         setIsToggled(!isToggled)
     }
 
-    function onToggleButtonKeyDown(event: React.KeyboardEvent<HTMLAnchorElement>){
+    function onToggleButtonKeyDown(event: React.KeyboardEvent<HTMLAnchorElement>) {
         const key = event.key;
         let flag = false;
 
@@ -65,7 +65,7 @@ export const ButtonExView = () => {
                 onClick={() => print()}
                 onKeyDown={onPrintButtonKeyDown}
                 className={clsx(
-                    'bg-blue-500 text-white px-2 py-2',
+                    'bg-blue-500 text-white p-2',
                     'inline-block relative',
                     'border-[1px] rounded-md',
                     'shadow-sm shadow-gray-400',
@@ -86,14 +86,14 @@ export const ButtonExView = () => {
                 onClick={toggle}
                 className={clsx(
                     !isToggled ?
-                    `bg-purple-500 text-white px-2 py-2
+                        `bg-purple-500 text-white px-2 py-2
                     inline-block relative
                     border-[1px] rounded-md
                     shadow-sm shadow-gray-400
                     outline-none
                     focus:outline-2 focus:outline-gray-600
                     hover:border-emerald-950 hover:bg-purple-600` :
-                    `bg-purple-800 text-white px-2 py-2
+                        `bg-purple-800 text-white px-2 py-2
                     inline-block relative
                     border-[1px] border-[hsl(261,71%,49%)] rounded-md
                     shadow-[0_3px_5px_1px_hsl(261,82%,30%)]
@@ -114,6 +114,33 @@ export const ButtonExView = () => {
                     />
                 }
             </a>
+            <p>The <q>Disabled</q> button at the left uses an <code>aria-disabled</code> state.</p>
+            <p>The <q>Disabled</q> button at the right uses a <code>disabled</code> button attribute.</p>
+            <div>
+                <button
+                    aria-disabled={true}
+                    className={clsx(
+                        'p-2 m-1 inline-block relative',
+                        'border-[1px] rounded-md',
+                        'shadow-sm shadow-gray-400',
+                        'aria-disabled:bg-gray-200',
+                    )}
+                >
+                    Disabled (aria)
+                </button>
+                <button
+                    disabled={true}
+                    aria-disabled={true}
+                    className={clsx(
+                        'p-2 m-1 inline-block relative',
+                        'border-[1px] rounded-md',
+                        'shadow-sm shadow-gray-400',
+                        'aria-disabled:bg-gray-200',
+                    )}
+                >
+                    Disabled (html attribute)
+                </button>
+            </div>
         </>
     )
 }
