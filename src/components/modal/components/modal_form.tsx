@@ -4,19 +4,19 @@ import { ModalBackdrop } from "./modal_backdrop"
 import { useCallback, useEffect, useLayoutEffect, useRef } from "react"
 import { AttemptFocus } from "../utils"
 
-interface FormModalProps {
+interface ModalFormProps {
     focusAfterCloseNode: HTMLButtonElement | null
     onAddClick: () => void
     onCancelClick: () => void
     onVerifyClick: () => void
 }
 
-export const FormModal = ({
+export const ModalForm = ({
     focusAfterCloseNode,
     onAddClick,
     onCancelClick,
     onVerifyClick,
-}: FormModalProps) => {
+}: ModalFormProps) => {
     const modalNode = useRef<HTMLDivElement | null>(null)
     const lastFocusNode = useRef<HTMLButtonElement | null>(null)
 

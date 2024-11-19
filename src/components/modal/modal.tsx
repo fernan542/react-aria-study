@@ -1,8 +1,8 @@
 import { useRef, useState } from "react"
-import { FormModal } from "./components/form_modal"
+import { ModalForm } from "./components/modal_form"
 
-export const ModalDialogExView = () => {
-    const [formDialogOpen, setFormDialogOpen] = useState(false)
+export const Modal = () => {
+    const [modalOpen, setModalOpen] = useState(false)
 
     const buttonNode = useRef<HTMLButtonElement | null>(null)
 
@@ -12,16 +12,16 @@ export const ModalDialogExView = () => {
                 ref={buttonNode}
                 type="button"
                 className="bg-blue-400 rounded-md text-white p-2"
-                onClick={() => setFormDialogOpen(true)}
+                onClick={() => setModalOpen(true)}
             >
                 Add Delivery Address
             </button>
 
             <div id="dialog_layer" className="dialogs">
-                {formDialogOpen && <FormModal
+                {modalOpen && <ModalForm
                     focusAfterCloseNode={buttonNode.current}
                     onAddClick={() => { }}
-                    onCancelClick={() => setFormDialogOpen(false)}
+                    onCancelClick={() => setModalOpen(false)}
                     onVerifyClick={() => { }}
                 />}
             </div>

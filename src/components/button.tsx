@@ -3,7 +3,7 @@ import VolumeUpIcon from '@mui/icons-material/VolumeUp';
 import clsx from 'clsx';
 import { useState } from 'react';
 
-export const ButtonExView = () => {
+export const Button = () => {
     const [isToggled, setIsToggled] = useState(false)
 
     function print() {

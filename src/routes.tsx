@@ -1,14 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import { App } from "./app";
 import { HomePage } from "./home";
-import {
-  AlertDialogExView,
-  AlertExView,
-  ButtonExView,
-  MenuButtonExView,
-  ModalDialogExView,
-  RadioGroupExView,
-} from "./examples";
+import * as Component from "./components";
+import * as Example from "./examples"
 
 export const router = createBrowserRouter([
   {
@@ -20,28 +14,32 @@ export const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "examples/alert",
-        element: <AlertExView />,
+        path: "components/alert",
+        element: <Component.Alert />,
       },
       {
-        path: "examples/alert-dialog",
-        element: <AlertDialogExView />,
+        path: "components/alert-dialog",
+        element: <Component.AlertDialog />,
       },
       {
-        path: "examples/button",
-        element: <ButtonExView />,
+        path: "components/button",
+        element: <Component.Button />,
       },
       {
-        path: "examples/menu-button",
-        element: <MenuButtonExView />,
+        path: "components/menu-button",
+        element: <Component.MenuButton />,
       },
       {
-        path: "examples/modal-dialog",
-        element: <ModalDialogExView />,
+        path: "components/modal",
+        element: <Component.Modal />,
       },
       {
-        path: "examples/radio-group",
-        element: <RadioGroupExView />,
+        path: "components/radio-group",
+        element: <Component.RadioGroup />,
+      },
+      {
+        path: "examples/forms",
+        element: <Example.FormsExample />,
       },
     ],
   },

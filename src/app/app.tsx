@@ -1,16 +1,16 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
-import { EXAMPLES } from "../constants";
+import { COMPONENTS } from "../constants";
 
 export const App = () => {
   const location = useLocation();
   const isNotIndex = location.pathname !== "/";
 
   function getHeaderTitle(): string {
-    for (const e of EXAMPLES) {
+    for (const e of COMPONENTS) {
       if (location.pathname === e.path) return e.name;
     }
 
-    return "Home"; 
+    return "Home";
   }
 
   return (
@@ -36,14 +36,14 @@ export const App = () => {
         <h1 className="text-2xl my-2">{getHeaderTitle()}</h1>
         <Outlet />
       </div>
-      <footer className="absolute p-4 bottom-0">
+      {/* <footer className="p-4 bottom-0">
         <a
           className="underline"
           href="https://github.com/fernan542/react-aria-study"
         >
           View in Github
         </a>
-      </footer>
+      </footer> */}
     </div>
   );
 };

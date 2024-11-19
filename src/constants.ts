@@ -1,13 +1,31 @@
-type Example = {
-  name: string;
-  path: string;
-};
+type Component = {
+  name: string
+  path: string
+  roles: string[]
+  properties: string[]
+  states: string[]
+}
 
-export const EXAMPLES: Example[] = [
-  { name: "Alert", path: "/examples/alert" },
-  { name: "Alert Dialog", path: "/examples/alert-dialog" },
-  { name: "Button", path: "/examples/button" },
-  { name: "Menu Button", path: "/examples/menu-button" },
-  { name: "Modal Dialog", path: "/examples/modal-dialog" },
-  { name: "Radio Group", path: "/examples/radio-group" },
+export const COMPONENTS: Component[] = [
+  {
+    name: "Alert",
+    path: "/components/alert",
+    roles: ['alert'],
+    properties: ['aria-live'],
+    states: [],
+  },
+  {
+    name: "Button",
+    path: "/components/button",
+    roles: ['button'],
+    properties: [],
+    states: ['aria-disabled', 'aria-pressed'],
+  },
+  {
+    name: "Menu Button",
+    path: "/components/menu-button",
+    roles: ['menu', 'menuitem'],
+    properties: ['aria-haspopup', 'aria-controls', 'aria-labelledby'],
+    states: ['aria-expanded'],
+  },
 ];
