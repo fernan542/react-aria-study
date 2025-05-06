@@ -58,6 +58,7 @@ function ComponentAttributesCell({ label, items }: ComponentAttributesCellProps)
           </li>
         ))}
       </ul>
+      <br />
     </>
   )
 }

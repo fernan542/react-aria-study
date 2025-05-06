@@ -38,6 +38,10 @@ export const router = createBrowserRouter([
         element: <Component.RadioGroup />,
       },
       {
+        path: "components/tabs",
+        element: <Component.Tabs />,
+      },
+      {
         path: "examples/forms",
         element: <Example.FormsExample />,
       },

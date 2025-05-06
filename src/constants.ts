@@ -28,4 +28,11 @@ export const COMPONENTS: Component[] = [
     properties: ['aria-haspopup', 'aria-controls', 'aria-labelledby'],
     states: ['aria-expanded'],
   },
+  {
+    name: "Tabs",
+    path: "/components/tabs",
+    roles: ['tablist', 'tab', 'tabpanel'],
+    properties: ['aria-controls', 'aria-labelledby'],
+    states: ['aria-selected'],
+  },
 ];
