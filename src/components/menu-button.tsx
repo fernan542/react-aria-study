@@ -1,5 +1,13 @@
 import clsx from "clsx";
 import { useEffect, useRef, useState } from "react";
+import { BreadcrumbHandleData } from "./breadcrumbs/useBreadcrumbs";
+
+const handle = {
+  breadcrumb: {
+    label: "Menu Button",
+    to: "/components/menu-button",
+  },
+} satisfies BreadcrumbHandleData;
 
 const menuItemsName = ["Sms", "Email", "In-App"];
 
@@ -320,3 +328,5 @@ export const MenuButton = () => {
     </>
   );
 };
+
+MenuButton.handle = handle;

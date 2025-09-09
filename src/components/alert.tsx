@@ -1,12 +1,20 @@
 import clsx from "clsx";
 import { useState } from "react";
+import { BreadcrumbHandleData } from "./breadcrumbs/useBreadcrumbs";
+
+const handle = {
+  breadcrumb: {
+    label: "Alert",
+    to: "/components/alert",
+  },
+} satisfies BreadcrumbHandleData;
 
 export const Alert = () => {
   const [isAlertVisible, setIsAlertVisible] = useState(false);
   const [isAriaLivePoliteVisible, setIsAriaLivePoliteVisible] = useState(false);
 
   return (
-    <>
+    <main>
       <article className="mt-4">
         <button
           type="button"
@@ -70,6 +78,8 @@ export const Alert = () => {
           )}
         </div>
       </article>
-    </>
+    </main>
   );
 };
+
+Alert.handle = handle;
