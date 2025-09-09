@@ -58,5 +58,8 @@ interface Props {
 }
 
 export const AnimatedAlert = ({ alert, center = false, onClose }: Props) => {
+  console.log(alert);
+  console.log(center);
+  console.log(onClose);
   return <div></div>;
 };

@@ -224,9 +224,7 @@ export const MenuButton = () => {
     }
   }
 
-  function onMenuItemMouseOver(
-    event: React.MouseEvent<HTMLLIElement, MouseEvent>
-  ) {
+  function onMenuItemMouseOver(event: React.FocusEvent<HTMLLIElement>) {
     const tgt = event?.currentTarget;
     tgt.focus();
   }
@@ -306,7 +304,7 @@ export const MenuButton = () => {
               className="focus:bg-slate-400 focus:text-white focus:outline-none"
               onClick={() => onMenuItemClick(name)}
               onKeyDown={(e) => onMenuItemKeyDown(name, e)}
-              onMouseOver={onMenuItemMouseOver}
+              onFocus={onMenuItemMouseOver}
             >
               {name}
             </li>

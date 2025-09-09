@@ -90,12 +90,28 @@ export const Button = () => {
         Print Page
       </div>
 
+      <br />
+      <br />
+
       <p>
-        This <q>Mute</q> toggle button uses an <code>a</code> element.
+        This <q>Mute</q> toggle button uses an <code>a</code> element. However,
+        this is not recommended for modern standards.
       </p>
+      <p>
+        Visit{" "}
+        <a
+          className="underline visited:text-purple-600"
+          href="https://github.com/infofarmer/eslint-plugin-jsx-a11y/blob/main/docs/rules/anchor-is-valid.md"
+        >
+          jsx-a11y anchor validation
+        </a>{" "}
+        for more info.
+      </p>
+      {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
       <a
         id="toggle"
         tabIndex={0}
+        role="button"
         aria-pressed={isToggled}
         onKeyDown={onToggleButtonKeyDown}
         onClick={toggle}
@@ -124,6 +140,10 @@ export const Button = () => {
           <VolumeUpIcon focusable={false} aria-hidden={true} />
         )}
       </a>
+
+      <br />
+      <br />
+
       <p>
         The <q>Disabled</q> button at the left uses an{" "}
         <code>aria-disabled</code> state.
