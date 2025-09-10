@@ -15,7 +15,7 @@ export const Modal = () => {
   const buttonNode = useRef<HTMLButtonElement | null>(null);
 
   return (
-    <>
+    <main>
       <button
         ref={buttonNode}
         type="button"
@@ -35,7 +35,7 @@ export const Modal = () => {
           />
         )}
       </div>
-    </>
+    </main>
   );
 };
 

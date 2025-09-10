@@ -22,7 +22,6 @@ export default function useBreadcrumbs(): BreadcrumbItem[] {
     .filter((match) => match.handle?.breadcrumb)
     .map((match) => {
       const { breadcrumb } = match.handle as BreadcrumbHandleData;
-      console.log(match);
       return breadcrumb;
     });
 

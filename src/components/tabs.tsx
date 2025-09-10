@@ -190,35 +190,33 @@ export const Tabs = () => {
   }
 
   return (
-    <>
-      <div>
-        <h3 id="tablist-1">Danish Composers</h3>
-        <div role="tablist" aria-labelledby="tablist-1">
-          {tabs.map((tab, index) => {
-            return (
-              <TabButton
-                key={tab.label}
-                label={tab.label}
-                buttonRef={(el) => (tabNodes.current[index] = el)}
-                selected={selectedTab === tab.label}
-                onClick={(t, e) => handleOnSelectionChanged(t, e.currentTarget)}
-                onKeyDown={onKeyDown}
-              />
-            );
-          })}
-        </div>
-
-        {tabs.map((tab) => (
-          <TabPanel
-            key={tab.label}
-            tab={tab.label}
-            visible={selectedTab === tab.label}
-          >
-            {tab.description}
-          </TabPanel>
-        ))}
+    <main>
+      <h3 id="tablist-1">Danish Composers</h3>
+      <div role="tablist" aria-labelledby="tablist-1">
+        {tabs.map((tab, index) => {
+          return (
+            <TabButton
+              key={tab.label}
+              label={tab.label}
+              buttonRef={(el) => (tabNodes.current[index] = el)}
+              selected={selectedTab === tab.label}
+              onClick={(t, e) => handleOnSelectionChanged(t, e.currentTarget)}
+              onKeyDown={onKeyDown}
+            />
+          );
+        })}
       </div>
-    </>
+
+      {tabs.map((tab) => (
+        <TabPanel
+          key={tab.label}
+          tab={tab.label}
+          visible={selectedTab === tab.label}
+        >
+          {tab.description}
+        </TabPanel>
+      ))}
+    </main>
   );
 };
 

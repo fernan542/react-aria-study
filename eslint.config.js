@@ -17,12 +17,10 @@ export default tseslint.config(
   {
     extends: [
       ...tseslint.configs.recommended,
-      // jsxA11y.flatConfigs.recommended,
     ],
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
-      // ...jsxA11y.flatConfigs.recommended.languageOptions,
       globals: globals.browser,
     },
     plugins: {
@@ -37,13 +35,6 @@ export default tseslint.config(
         'warn',
         { allowConstantExport: true },
       ],
-      // "jsx-a11y/anchor-is-valid": [
-      //   "error", {
-      //     "components": ["Link"],
-      //     "specialLink": ["to"],
-      //     "aspects": ["preferButton"]
-      //   }
-      // ]
     },
   },
 )

@@ -253,7 +253,7 @@ export const MenuButton = () => {
   }, [isPopupOpen, domNode]);
 
   return (
-    <>
+    <main>
       <h2 className="text-2xl">Example: Menu Button</h2>
       <div ref={domNode} className="my-5">
         <button
@@ -323,7 +323,7 @@ export const MenuButton = () => {
           />
         </label>
       </p>
-    </>
+    </main>
   );
 };
 

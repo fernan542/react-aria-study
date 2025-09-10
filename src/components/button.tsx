@@ -67,7 +67,7 @@ export const Button = () => {
   }
 
   return (
-    <>
+    <main>
       <p>
         This <q>Print</q> action button uses a <code>div</code> element.
       </p>
@@ -177,7 +177,7 @@ export const Button = () => {
           Disabled (html attribute)
         </button>
       </div>
-    </>
+    </main>
   );
 };
 
